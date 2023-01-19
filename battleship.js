@@ -130,8 +130,8 @@ const controller = {
             this.guesses++;
             let hit = model.fire(location);
             if (hit && model.shipSunk === model.numShips) {
-                view.displayMessage("You sunk all my battleship in " + this.guesses + " guesses.")
-                alert("Game over!")
+                alert("Game over! You sunk all my battleship in " + this.guesses + " guesses.");
+                window.location.reload();
             }
         }
     }
